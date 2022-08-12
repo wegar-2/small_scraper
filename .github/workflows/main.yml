@@ -22,5 +22,4 @@ jobs:
           ref: # branch
             master
       - name: execute py script # run file
-        run: |
-          python small_scraper/run.py
+        run: python ./small_scraper/run.py

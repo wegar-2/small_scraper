@@ -20,7 +20,7 @@ jobs:
             pip install flake8 pytest
             if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           ref: # branch
-            my_other_branch
+            master
       - name: execute py script # run file
         run: |
           python small_scraper/run.py

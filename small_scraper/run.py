@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from string import ascii_lowercase
 from google.oauth2 import service_account
-
+import json
 
 print("Hello world! ")
 print("trying to load defined environment variable...")
@@ -21,7 +21,8 @@ df = pd.DataFrame(
 
 
 print("creating data table...")
-info = os.environ["MY_SECRET_KEY"]
+str_key = os.environ["MY_SECRET_KEY"]
+info = json.loads(str_key)
 sa_credentials = service_account.Credentials.from_service_account_info(info)
 
 print("uploading data table...")
@@ -30,3 +31,4 @@ df.to_gbq(
     project_id="default-359215",
     credentials=sa_credentials
 )
+

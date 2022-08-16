@@ -27,5 +27,15 @@ jobs:
         env:
             TEST_ENV_VAR: ${{ secrets.TEST_ENV_VAR }}
             MY_SECRET_KEY: ${{ secrets.MY_SECRET_KEY }}
+            ENV_TYPE: ${{ secrets.ENV_TYPE }}
+            ENV_PROJECT_ID: ${{ secrets.ENV_PROJECT_ID }}
+            ENV_PRIVATE_KEY_ID: ${{ secrets.ENV_PRIVATE_KEY_ID }}
+            ENV_PRIVATE_KEY: ${{ secrets.ENV_PRIVATE_KEY }}
+            ENV_CLIENT_EMAIL: ${{ secrets.ENV_CLIENT_EMAIL }}
+            ENV_CLIENT_ID: ${{ secrets.ENV_CLIENT_ID }}
+            ENV_AUTH_URI: ${{ secrets.ENV_AUTH_URI }}
+            ENV_TOKEN_URI: ${{ secrets.ENV_TOKEN_URI }}
+            ENV_AUTH_PROVIDER: ${{ secrets.ENV_AUTH_PROVIDER }}
+            ENV_CLIENT_CERT: ${{ secrets.ENV_CLIENT_CERT }}
         run: |
           python small_scraper/run.py

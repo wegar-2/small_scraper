@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from string import ascii_lowercase
 from google.oauth2 import service_account
-import json
 
 
 print("Hello world! ")

@@ -24,4 +24,5 @@ jobs:
       - name: Execute Python script # Run the run.py to get the latest data
         env:
             TEST_ENV_VAR: ${{ secrets.TEST_ENV_VAR }}
-        run: python small_scraper/run.py
+        run: |
+          python small_scraper/run.py

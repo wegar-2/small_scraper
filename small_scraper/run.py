@@ -5,6 +5,7 @@ from string import ascii_lowercase
 from google.oauth2 import service_account
 import json
 
+
 print("Hello world! ")
 print("trying to load defined environment variable...")
 my_env = os.environ["TEST_ENV_VAR"]
@@ -16,6 +17,7 @@ env_type = os.environ["ENV_TYPE"]
 env_project_id = os.environ["ENV_PROJECT_ID"]
 env_private_key_id = os.environ["ENV_PRIVATE_KEY_ID"]
 env_private_key = os.environ["ENV_PRIVATE_KEY"]
+env_private_key = env_private_key.replace('\\n', '\n')
 env_client_email = os.environ["ENV_CLIENT_EMAIL"]
 env_client_id = os.environ["ENV_CLIENT_ID"]
 env_auth_uri = os.environ["ENV_AUTH_URI"]

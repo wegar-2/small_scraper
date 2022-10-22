@@ -55,6 +55,7 @@ print("uploading data table...")
 df.to_gbq(
     destination_table="my_dataset.my_table2",
     project_id="default-359215",
-    credentials=sa_credentials
+    credentials=sa_credentials,
+    if_exists="replace"
 )
 
